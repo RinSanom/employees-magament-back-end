@@ -95,7 +95,7 @@ return [
             'prefix_indexes' => true,
             'search_path' => 'public',
              'schema'   => 'employees',
-            'sslmode' => 'prefer',
+            'sslmode'  => env('DB_SSLMODE', 'require'),
 
         ],
         'sqlsrv' => [

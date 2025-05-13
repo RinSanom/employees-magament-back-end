@@ -20,3 +20,4 @@ Route::get('/employees/search', [EmployeeController::class, 'search']);
 Route::get('/employees/{id}', [EmployeeController::class, 'getEmployeeById']);
 Route::patch('/update-employee/{id}', [EmployeeController::class, 'updateEmployee']);
 
+    
