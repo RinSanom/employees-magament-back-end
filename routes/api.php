@@ -7,6 +7,8 @@ Route::get('/', function () {
     return response()->json([
         'default_connection' => config('database.default'),
         'host' => config('database.connections.pgsql.host'),
+        'message' => 'Welcome to the Employee Management API',
+        'status' => 'success',
     ]);
 });
 
