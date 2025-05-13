@@ -3,7 +3,6 @@
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
-
 Route::get('/', function () {
     return response()->json([
         'message' => 'Welcome to the Employee Management API',
@@ -20,4 +19,5 @@ Route::get('/employees/search', [EmployeeController::class, 'search']);
 Route::get('/employees/{id}', [EmployeeController::class, 'getEmployeeById']);
 Route::patch('/update-employee/{id}', [EmployeeController::class, 'updateEmployee']);
 
-    
+
+
