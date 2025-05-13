@@ -4,12 +4,10 @@ use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
-    try {
-        $result = DB::select('SELECT 1');
-        return response()->json(['message' => '✅ DB connected', 'result' => $result]);
-    } catch (\Exception $e) {
-        return response()->json(['error' => $e->getMessage()], 500);
-    }
+    return response()->json([
+        'default_connection' => config('database.default'),
+        'host' => config('database.connections.pgsql.host'),
+    ]);
 });
 
 Route::get('/employee-number', [EmployeeController::class, 'countEmployees']);
